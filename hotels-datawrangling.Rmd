@@ -1,6 +1,6 @@
 ---
 title: "Hotel bookings - data wrangling"
-author: "Mine Çetinkaya-Rundel"
+author: "Thomas Sease :)"
 output: github_document
 ---
 
