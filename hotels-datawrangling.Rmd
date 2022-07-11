@@ -111,7 +111,7 @@ What does this reveal about the surprising results you spotted in the previous e
 
 **Note:** Don't forget to label your R chunk as well (where it says `label-me-2`).
 
-```{r Repeating above for canceled bookings}
+```{r Repeating-above-for-canceled-bookings}
 hotels %>% 
   filter(is_canceled == 1) %>% 
   count(adults, sort = T)
