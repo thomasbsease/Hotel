@@ -181,14 +181,59 @@ child **or** baby in the room? Then, do the same for city hotels, and
 compare the numbers of rows in the resulting filtered data frames.
 
 ``` r
-# add code here
-# pay attention to correctness and code style
+hotels %>% 
+  filter(
+    hotel == 'Resort Hotel', 
+         children >= 1 | babies >= 1) 
 ```
 
+    ## # A tibble: 3,929 × 32
+    ##    hotel        is_canceled lead_time arrival_date_year arrival_date_month
+    ##    <chr>              <dbl>     <dbl>             <dbl> <chr>             
+    ##  1 Resort Hotel           0        18              2015 July              
+    ##  2 Resort Hotel           1        47              2015 July              
+    ##  3 Resort Hotel           0         1              2015 July              
+    ##  4 Resort Hotel           0        10              2015 July              
+    ##  5 Resort Hotel           1        79              2015 July              
+    ##  6 Resort Hotel           0       101              2015 July              
+    ##  7 Resort Hotel           0        92              2015 July              
+    ##  8 Resort Hotel           1        26              2015 July              
+    ##  9 Resort Hotel           0       102              2015 July              
+    ## 10 Resort Hotel           0        78              2015 July              
+    ## # … with 3,919 more rows, and 27 more variables:
+    ## #   arrival_date_week_number <dbl>, arrival_date_day_of_month <dbl>,
+    ## #   stays_in_weekend_nights <dbl>, stays_in_week_nights <dbl>, adults <dbl>,
+    ## #   children <dbl>, babies <dbl>, meal <chr>, country <chr>,
+    ## #   market_segment <chr>, distribution_channel <chr>, is_repeated_guest <dbl>,
+    ## #   previous_cancellations <dbl>, previous_bookings_not_canceled <dbl>,
+    ## #   reserved_room_type <chr>, assigned_room_type <chr>, …
+
 ``` r
-# add code here
-# pay attention to correctness and code style
+hotels %>% 
+  filter(hotel == 'City Hotel', 
+         children >= 1 | babies >= 1) 
 ```
+
+    ## # A tibble: 5,403 × 32
+    ##    hotel      is_canceled lead_time arrival_date_year arrival_date_month
+    ##    <chr>            <dbl>     <dbl>             <dbl> <chr>             
+    ##  1 City Hotel           1       100              2015 July              
+    ##  2 City Hotel           0        69              2015 July              
+    ##  3 City Hotel           0        67              2015 July              
+    ##  4 City Hotel           1        60              2015 July              
+    ##  5 City Hotel           0         0              2015 July              
+    ##  6 City Hotel           0         0              2015 July              
+    ##  7 City Hotel           0         0              2015 July              
+    ##  8 City Hotel           0        84              2015 July              
+    ##  9 City Hotel           0        74              2015 July              
+    ## 10 City Hotel           0        75              2015 July              
+    ## # … with 5,393 more rows, and 27 more variables:
+    ## #   arrival_date_week_number <dbl>, arrival_date_day_of_month <dbl>,
+    ## #   stays_in_weekend_nights <dbl>, stays_in_week_nights <dbl>, adults <dbl>,
+    ## #   children <dbl>, babies <dbl>, meal <chr>, country <chr>,
+    ## #   market_segment <chr>, distribution_channel <chr>, is_repeated_guest <dbl>,
+    ## #   previous_cancellations <dbl>, previous_bookings_not_canceled <dbl>,
+    ## #   reserved_room_type <chr>, assigned_room_type <chr>, …
 
 ### Exercise 5.
 
