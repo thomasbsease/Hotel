@@ -355,9 +355,16 @@ reproducible way with some code.
 `select` the relevant columns.
 
 ``` r
-# add code here
-# pay attention to correctness and code style
+hotels %>% 
+  filter(adr == min(adr) | adr == max(adr)) %>% 
+  select(adr,arrival_date_year, arrival_date_day_of_month, children, babies) 
 ```
+
+    ## # A tibble: 2 × 5
+    ##       adr arrival_date_year arrival_date_day_of_month children babies
+    ##     <dbl>             <dbl>                     <dbl>    <dbl>  <dbl>
+    ## 1   -6.38              2017                         5        0      0
+    ## 2 5400                 2016                        25        0      0
 
 ## Data dictionary
 
